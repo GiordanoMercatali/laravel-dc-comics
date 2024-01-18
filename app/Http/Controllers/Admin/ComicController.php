@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Models\Comic;
 use Illuminate\Http\Request;
+use Mockery\Generator\StringManipulation\Pass\Pass;
 
 class ComicController extends Controller
 {
