@@ -20,5 +20,5 @@ use App\Http\Controllers\Admin\ComicController;
 // });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
+Route::put('comics/{comic}', [ComicController::class, 'update'])->name('comics.update');
 Route::resource('comics', ComicController::class);

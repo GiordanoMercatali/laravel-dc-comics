@@ -52,7 +52,7 @@ class ComicController extends Controller
         $comic->sale_date = $form_data['sale_date'];
         $comic->type = $form_data['type'];*/
 
-        return redirect()->route('comics.show', ['comic' => $comic->id]);
+        return redirect()->route('comics.show', ['comic' => $comic->id]); //Pattern post - redirect - get
     }
 
     /**
@@ -75,7 +75,8 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view ('comics.edit', compact('comic'));
     }
 
     /**
@@ -87,7 +88,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $form_data = $request->all();
+        $comic_to_modify = Comic::findOrFail($id);
+        $comic_to_modify->title = $form_data['title'];
+        $comic_to_modify->description = $form_data['description'];
+        $comic_to_modify->thumb = $form_data['thumb'];
+        $comic_to_modify->price = $form_data['price'];
+        $comic_to_modify->series = $form_data['series'];
+        $comic_to_modify->sale_date = $form_data['sale_date'];
+        $comic_to_modify->type = $form_data['type'];
+        $comic_to_modify->save();
     }
 
     /**
