@@ -40,10 +40,11 @@
                     </div>
 
                     <div class="m-2">
-                        <label for="price" class="form-label">Prices</label>
-                        <textarea class="form-control" id="price" rows="3" name="price"></textarea>
+                        <label for="type" class="form-label">Price</label>
+                        <input type="text" class="form-control" id="price" name="price">
                     </div>
 
+                    <a class="btn btn-danger" href="{{ route('comics.index') }}">Back</a>
                     <button class="btn btn-success" type="submit">Save</button>
                    
                 </form>
