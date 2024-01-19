@@ -30,8 +30,8 @@
                     </div>
 
                     <div class="m-2">
-                        <label for="sale_date" class="form-label">Peso</label>
-                        <input type="text" class="form-control" id="sale_date" name="sale_date">
+                        <label for="sale_date" class="form-label">Sale Date</label>
+                        <input type="date" class="form-control" id="sale_date" name="sale_date">
                     </div>
 
                     <div class="m-2">
@@ -44,7 +44,7 @@
                         <textarea class="form-control" id="price" rows="3" name="price"></textarea>
                     </div>
 
-                    <button class="btn btn-success" type="submit">Salva</button>
+                    <button class="btn btn-success" type="submit">Save</button>
                    
                 </form>
             </div>
