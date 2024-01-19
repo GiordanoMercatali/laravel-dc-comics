@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container py-5">
-        <h1>La lista delle paste</h1>
+        <h1>Comics</h1>
         <div class="text-end">
           <a class="btn btn-primary" href="{{ route('comics.create') }}">Add comic</a>
         </div>
