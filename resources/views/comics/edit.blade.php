@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1 class="text-center">Modify Comic</h1>
+        <h1 class="text-center">Edit {{ $comic->title }} info</h1>
 
         <div class="row justify-content-between align-items-center">
             <div class="col-6">
