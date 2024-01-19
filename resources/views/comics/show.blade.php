@@ -22,5 +22,6 @@
                 Type: {{ $comic->type }}
             </li>
         </ul>
+        <a class="btn btn-danger" href="{{ route('comics.index') }}">Back</a>
     </div>    
 @endsection
