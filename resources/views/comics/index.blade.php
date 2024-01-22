@@ -32,6 +32,8 @@
                       <a class="btn btn-success" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Info</a>
                       <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Change</a>
                       <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
                         <button class="btn btn-danger" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Delete</button>
                       </form>
 
