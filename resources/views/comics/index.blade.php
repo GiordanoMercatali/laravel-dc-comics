@@ -16,6 +16,7 @@
                 <th scope="col">Type</th>
                 <th scope="col">Price</th>
                 <th scope="col">Sale date</th>
+                <th scope="col">More</th>
               </tr>
             </thead>
             <tbody>
@@ -30,6 +31,10 @@
                     <td>
                       <a class="btn btn-success" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Info</a>
                       <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Change</a>
+                      <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                        <button class="btn btn-danger" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Delete</button>
+                      </form>
+
                     </td>
                 </tr>
                 @endforeach
