@@ -6,12 +6,21 @@
 
         <div class="row justify-content-between align-items-center">
             <div class="col-6">
+
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </div>
+                @endif
+
                 <form action="{{ route('comics.store') }}" method="POST">
                     @csrf
                     
                     <div class="m-2">
                         <label for="title" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="title" name="title">
+                        <input required type="text" class="form-control" id="title" name="title">
                     </div>
 
                     <div class="m-2">

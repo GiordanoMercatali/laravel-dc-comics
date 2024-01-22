@@ -90,7 +90,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $comic_to_modify = Comic::findOrFail($id);
         $comic_to_modify->title = $form_data['title'];
         $comic_to_modify->description = $form_data['description'];
